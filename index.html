@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica SCTR</title>
+</head>
+<style> 
+body{
+    margin: 0;
+    padding: 0;
+    background: lightslategrey;   
+    width: 50% ;
+}
+
+.slideshow{
+    height: 450px;
+    width: 750px;
+    overflow: hidden;
+}
+.cen{
+    position: absolute;
+}
+
+.change{
+    position: absolute;
+    display: flex;
+    left: 22%;
+    bottom: 190px;
+}
+
+.tool{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    border: 2px solid #fff;
+    border-radius: 50%;
+}
+
+.tool:hover{
+    background: #fff;
+}
+
+input[name="p"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+    height: 100%;
+    width: 500%;
+    display: flex;
+}
+
+.slide{
+    width: 20%;
+    transition: 0.5s;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+}
+
+#c1:checked ~ .pc1{
+    margin-left: 0%;
+}
+
+#c2:checked ~ .pc1{
+    margin-left: -20%;
+}
+
+#c3:checked ~ .pc1{
+    margin-left: -40%;
+}
+
+#c4:checked ~ .pc1{
+    margin-left: -60%;
+}
+
+#c5:checked ~ .pc1{
+    margin-left: -80%;
+}
+
+
+</style>
+<body>
+    <div class="slideshow cen">
+        <div class="slides">
+            <input type="radio" name="p" id="c1" checked>
+            <input type="radio" name="p" id="c2">
+            <input type="radio" name="p" id="c3">
+            <input type="radio" name="p" id="c4">
+            <input type="radio" name="p" id="c5">
+            <div class="slide pc1">
+                <img src="images/oficina1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/oficina2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/oficina3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/oficina 4.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/oficina2.jpg" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="change">
+    <label class="tool" for="c1"></label>
+    <label class="tool" for="c2"></label>
+    <label class="tool" for="c3"></label>
+    <label class="tool" for="c4"></label>
+    <label class="tool" for="c5"></label>
+    </div>
+</body>
+</html>
